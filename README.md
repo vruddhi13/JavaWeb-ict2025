@@ -15,7 +15,7 @@
           6. portNumber : 3013 (i have 3013 but you have default 3006)
       3. now click finish
       4. go to general
-      5. Datasource ClassNAme : com.mysql.cj.jdbc.MysqlDataSource (fill this same as )
+      5. Datasource ClassName : com.mysql.cj.jdbc.MysqlDataSource (fill this same as )
       6. Driver ClassName : com.mysql.cj.jdbc.Driver (same as writed)
       7. click Save
       8. Click Ping --> Ping Successed (Came so your ping is created) and connection also established!.
