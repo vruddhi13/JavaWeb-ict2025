@@ -29,18 +29,27 @@
 
 
 
-Creating JDBC Connection Pool in Payara Server
+Setup: Creating a JDBC Connection Pool in Payara Server
+
+Follow these steps to create a JDBC connection pool for your MySQL database in Payara Server.
+
 1. Start Payara Server
 
-Right-click your server in NetBeans → View Domain Admin Console.
+Open NetBeans.
 
-Payara Admin Console will open in your browser.
+Right-click your Payara server → View Domain Admin Console.
 
-2. Create JDBC Connection Pool
+The Payara Admin Console will open in your browser.
 
-Navigate to: JDBC → JDBC Connection Pools → New
+2. Create a JDBC Connection Pool
 
-Pool Name: Any name you prefer
+Navigate to:
+
+JDBC → JDBC Connection Pools → New
+
+Fill in the required fields:
+
+Pool Name: Any name you like (e.g., MyPool)
 
 Resource Type: javax.sql.DataSource
 
@@ -48,9 +57,9 @@ Database Driver Vendor: MySQL
 
 Click Next
 
-Go to Additional Properties and fill in:
+Configure Additional Properties:
 
-Password: root123 (your MySQL root password)
+Password: root123 (your MySQL password)
 
 Database Name: DbEmp
 
@@ -58,12 +67,15 @@ Server Name: localhost
 
 User: root
 
-URL: jdbc:mysql://localhost:33013/dbemployee?useSSL=false
-(Adjust port and database name based on your local setup)
+URL:
 
-Port Number: 3013 (or your MySQL port, default is 3306)
+jdbc:mysql://localhost:33013/dbemployee?useSSL=false
 
-Click Finish
+(Adjust port/database based on your setup)
+
+Port Number: 3013 (default MySQL port is usually 3306)
+
+Click Finish.
 
 Go to the General tab:
 
@@ -71,16 +83,26 @@ Datasource ClassName: com.mysql.cj.jdbc.MysqlDataSource
 
 Driver ClassName: com.mysql.cj.jdbc.Driver
 
-Click Save
+Click Save.
+
+Test the connection:
 
 Click Ping → You should see Ping Succeeded.
 
-Your connection pool is now created and working.
+3. Fixing Datasource ClassName Errors
 
-3. If you encounter Datasource ClassName errors
+If you encounter errors related to Datasource ClassName:
 
-Download the MySQL Connector JAR file:
+Download the MySQL Connector J JAR file:
+
 MySQL Connector J 8.4.0
 
-Place the JAR in: C:\payara_server\glassfish\domains\domain1\lib\
-Restart Payara Server and try again.
+C:\payara_server\glassfish\domains\domain1\lib\
+
+Restart Payara Server.
+
+✅ Result
+
+Your JDBC Connection Pool is ready.
+
+You can now use it in your Java web applications to connect to the MySQL database.
