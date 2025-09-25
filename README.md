@@ -23,6 +23,10 @@
 ------> or you are having error of server.log of Datasource classname error So follow this steps:
 1. C:\payara_server\glassfish\domains\domain1\lib\mysql-connector-j-8.4.0  -->install mysql-connector .jar file and store that in path that i writed [mysql-connector-j-8.4.0 path---> https://downloads.mysql.com/archives/c-j/]
 2. store that .jar file and run!
+3. click save
+4. click ping!...
+
+
 
 
 
