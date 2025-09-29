@@ -27,6 +27,22 @@
 4. click ping!...
 
 
+# JNDI MessagingModule :-
+1. Create Project -> Java With Ant -> Java Enterprise -> EJB Module -> name: MessagingModule -> next
+2. go to the services -> servers -> payara server -> Right-Click -> start server -> after server started -> click view domain admin console ->
+   a. JMS Resources -> Destination Resources -> new -> JNDI name : jms/ictQue -> Physical Destination name: ictQue -> Resource Type : jakarta.jms.Queue -> OK.
+   b. create another JNDI -> new -> JNDI name : jms/ictTopic -> Physical Destination name: ictTopic -> Resource Type : jakarta.jms.Topic -> OK.
+3. Connection Factories -> new -> JNDI Name : jms/ictqueFactory -> Resource Type: jakarta.jms.QueueConnectionFactory -> OK. create same factory as Topic -> new -> JNDI Name : jms/icttopicFactory -> Resource Type: jakarta.jms.TopicConnectionFactory -> OK.
+4. now go to the netbean messaginmodule Project in this -> source package -> new -> other -> Enterprise Java -> Message Driven Bean -> Name : FirstQueueBean -> Package: ejb -> server Destination that gived in admin console of server -> Server Destination: jms/ictQue -> next.
+
+1. in this i had error when creating FirstQueueBean File like ->  
+     The error message, "This feature is not fully supported in J2EE 1.3. You have to upgrade your project to J2EE 1.4,",
+   so what i did next ->Follow this steps ->
+   
+
+
+
+
 
 
 
