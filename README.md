@@ -36,8 +36,30 @@
 4. now go to the netbean messaginmodule Project in this -> source package -> new -> other -> Enterprise Java -> Message Driven Bean -> Name : FirstQueueBean -> Package: ejb -> server Destination that gived in admin console of server -> Server Destination: jms/ictQue -> next.
 
 1. in this i had error when creating FirstQueueBean File like ->  
-     The error message, "This feature is not fully supported in J2EE 1.3. You have to upgrade your project to J2EE 1.4,",
-   so what i did next ->Follow this steps ->
+     The error message, "This feature is not fully supported in J2EE 1.3. You have to upgrade your project to J2EE 1.4,", so go with maven project
+
+# Maven With MessagingModule
+1. new project -> Java with maven -> EJB Module -> name -> MessagingModule -> Next ->Finish
+2. go to pom.xml ->
+   <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany</groupId>
+    <artifactId>MessagingModule</artifactId>
+    <version>1</version>
+    <packaging>ejb</packaging> -> war to change ejb
+    <name>MessagingModule</name> -> Snapshot-1.0 delete
+3. source package -> right click -> Other ->Enterprice JavaBeans -> Message driven bean -> EJB Name: FirstqueueBean-> package: ejb ->server destination : jms/ictQue -> Next ->Destination type -> QUEUE -> Finish.
+4. create now Topic for  same as queue we created  --> source package -> right click -> Other ->Enterprice JavaBeans -> Message driven bean -> EJB Name: FirstTopicBean-> package: ejb ->server destination : jms/icttopic -> Next ->Destination type -> TOPIC -> Finish.
+5. create all two files of SecondQueueBean and SecondTopicBean like First
+
+Now creating SenderServlet and RecieverServlet same as like:
+1. New project -> Java with maven -> web application -> name : MessageClientApp -> package: servlet -> Next
+2. source package -> new -> Servlet -> SenderServlet and RecieverServlet
+3. write code and run first SenderServlet and FirstQueueBean project and then now run RecieverServlet -> and now FirstTopicBean or FirstQueueBean
+
+==> output :
+payara server in i am queue sender like output come in console
+    
+  
    
 
 
