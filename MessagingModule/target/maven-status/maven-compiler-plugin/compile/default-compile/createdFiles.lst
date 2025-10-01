@@ -1,0 +1,6 @@
+ejb\FirstQueueBean.class
+com\mycompany\messagingmodule\JakartaRestConfiguration.class
+ejb\FirstTopicBean.class
+ejb\SecondTopicBean.class
+ejb\SecondQueueBean.class
+com\mycompany\messagingmodule\resources\JakartaEE11Resource.class
