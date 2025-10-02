@@ -53,11 +53,12 @@
 
 Now creating SenderServlet and RecieverServlet same as like:
 1. New project -> Java with maven -> web application -> name : MessageClientApp -> package: servlet -> Next
-2. source package -> new -> Servlet -> SenderServlet and RecieverServlet
+2. source package -> new -> Servlet -> SenderServlet and RecieverServlet create
 3. write code and run first SenderServlet and FirstQueueBean project and then now run RecieverServlet -> and now FirstTopicBean or FirstQueueBean
 
 ==> output :
 payara server in i am queue sender like output come in console
+
     
   
    
