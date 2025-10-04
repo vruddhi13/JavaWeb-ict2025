@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>All Movies</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="List of Movies"/></h1>
+                <h:dataTable value="#{home.movies}" var="item">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Movie_id"/>
+                        </f:facet>
+                        <h:outputText value="#{item.movie_id}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Movie_name"/>
+                        </f:facet>
+                        <h:commandButton action="#{home.deleteMovie(item.movie_id)}" value="Delete" />
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
