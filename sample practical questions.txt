@@ -1,0 +1,41 @@
+sample practical questions
+
+            
+   
+   
+
+
+
+Q.1 A company has departments and employees in corresponding
+departments. 20
+
+
+Table Dept : deptid dept_name, location
+
+
+   Emp : empno, ename, deptid (FK), dateofjoining, salary
+
+
+
+
+
+
+
+Write a Model to perform all CRUD operations on the above tables.
+Test this model using a servlet. Use JPA
+
+
+NO GUI.
+
+                                                     
+
+
+Q.2 Write the logic of sending the message also from an end user to a
+JMS queue. Also write a Messaging Bean which accepts a message from a
+queue and displays it.. Use EJB
+
+Q.3 The authors and books are in a many-to-many relationship
+do as following
+1. create appropriate tables
+2. perform operation to add books to authoe and remove book from author. 
+3. Display the authorwise books and bookwise authors.
