@@ -88,17 +88,17 @@ public class AuthorBookServlet extends HttpServlet {
 //                out.println("<br>");
 //            }
 
-                Author a1 = model.createAuthor("JJJJ");
-                Book b1 = model.createBook("gdhsd");
+                Author a1 = model.createAuthor("David Johr");
+                Book b1 = model.createBook("Midnight Fanfasy");
                 
                 model.addBookToAuthor(a1.getAuthorId(), b1.getBookId());
-                out.println(a1.getAuthorId()+ "- "+b1.getBookId());
+                out.println("Author id: "+a1.getAuthorId()+ "- Book Id: "+b1.getBookId());
                 
                List<Author> authors = model.getAllAuthors();
                 for (Author a : authors) {
-                    out.println("<b>" + a.getName() + "</b><br>");
+                    out.println("<b> Author Name: " + a.getName() + "</b><br>");
                     for (Book b : a.getBooks()) {
-                        out.println("-" + b.getTitle() + "<br>");
+                        out.println("- Book Title: " + b.getTitle() + "<br>");
                     }
                     out.println("<br>");
                 }
@@ -149,3 +149,4 @@ public class AuthorBookServlet extends HttpServlet {
     }// </editor-fold>
 
 }
+
