@@ -53,7 +53,7 @@ public class AuthorBookModelBean implements AuthorBookModelBeanLocal {
 
     @Override
     public List<Book> getAllBooks() {
-        return em.createQuery("SELECT DISTINCT b FROM Book b LEFT FETCH a.authors",Book.class).getResultList();
+        return em.createQuery("SELECT DISTINCT b FROM Book b LEFT FETCH b.authors",Book.class).getResultList();
     }
 
     @Override
@@ -72,3 +72,4 @@ public class AuthorBookModelBean implements AuthorBookModelBeanLocal {
 
    
 }
+
