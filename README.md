@@ -61,7 +61,7 @@ payara server in i am queue sender like output come in console
 
 
 # Persistance CRUD Operation
-
+first make to session bean like testBean.java and testBeanLocal.java so these is performes CRUD Operation. as a backend side Of EJB
     
   
    
